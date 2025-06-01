@@ -1,0 +1,88 @@
+.main-skill {
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    font-family: system-ui;
+    >.skills {
+        width: 100%;
+        height: fit-content;
+        background-color: rgb(235, 240, 246);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 10px;
+        margin: 40px 0;
+
+        >.header {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 50px;
+
+            >h1 {
+                font-size: clamp(1.5rem, 5vw, 2.5rem);
+                font-weight: 600;
+            }
+
+            >.underline {
+                height: 4px;
+                width: 55px;
+                margin-top: 6px;
+                background: linear-gradient(to right, blue, rgb(145, 75, 237));
+                border-radius: 25px;
+            }
+        }
+
+        >.skills-info {
+            flex-grow: 1;
+            width: 100%;
+            max-width: fit-content;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+
+            >.skill-divs {
+                >.skill-name {
+                    >h3 {
+                        background: linear-gradient(to right, blue, rgb(145, 75, 237), rgb(145, 75, 237));
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                >.skills-list {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    padding: 10px;
+
+                    >p {
+                        background-color: #fff;
+                        text-align: center;
+                        padding: 10px 30px;
+                        border-radius: 25px;
+                        color: #3b3a3a;
+
+                        /* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); */
+                        &:hover {
+                            background: linear-gradient(to right, blue, rgb(145, 75, 237));
+                            color: #fff;
+                            font-weight: bold;
+                            cursor: pointer;
+                            transform: scale(1.03);
+                            box-shadow: 0 4px 4px rgba(145, 75, 237, 0.3);
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+}

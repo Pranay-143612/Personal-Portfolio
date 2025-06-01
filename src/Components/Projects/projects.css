@@ -1,0 +1,136 @@
+.main-pro {
+    min-height: 100dvh;
+    width: 100%;
+    overflow: hidden;
+    font-family: system-ui;
+    >.Projects {
+        background-color: rgb(235, 240, 246);
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+
+        >.projects-info {
+            width: 100%;
+            height: 100%;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+
+            >.header {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 50px;
+                margin-top: 50px;
+
+                >h1 {
+                    font-size: clamp(1.5rem, 5vw, 2.5rem);
+                    font-weight: 600;
+                }
+
+                >.underline {
+                    height: 4px;
+                    width: 55px;
+                    margin-top: 6px;
+                    background: linear-gradient(to right, blue, rgb(145, 75, 237));
+                    border-radius: 25px;
+                }
+            }
+
+            .projects-list {
+                flex-grow: 1;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 24px;
+                justify-content: center;
+                align-items: stretch;
+                padding: 20px;
+
+                .project-card {
+                    max-width: 350px;
+                    min-width: 250px;
+                    flex-grow: 1;
+                    min-height: 70vh;
+                    background-color: #fff;
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 16px;
+                    overflow: hidden;
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    .image {
+                        width: 100%;
+                        height: 40%;
+                        background-color: #fff;
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+                        object-fit: cover;
+                        transition: background-color 0.3s ease;
+
+                        >img {
+                            height: 100%;
+                            width: 100%;
+                            background-position: center;
+                            background-size: cover;
+                        }
+                    }
+
+                    .project-text {
+                        width: 100%;
+                        flex-grow: 1;
+                        padding: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        h2 {
+                            font-size: 1.6rem;
+                            background: linear-gradient(to right, #3578e5, #914bed);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            margin: 0;
+                        }
+
+                        p {
+                            color: #666;
+                            line-height: 1.6;
+                            font-size: 15px;
+                            margin: 0;
+                            flex-grow: 1;
+                        }
+
+                        .tools {
+                            display: flex;
+                            gap: 16px;
+                            flex-wrap: wrap;
+
+                            p {
+                                color: #444;
+                                background-color: #f0f0f0;
+                                padding: 8px 18px;
+                                border-radius: 20px;
+                                font-size: 13px;
+                                font-weight: 600;
+                                transition: background-color 0.25s ease, box-shadow 0.25s ease;
+
+                                &:hover {
+                                    background-color: #e0e0e0;
+                                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

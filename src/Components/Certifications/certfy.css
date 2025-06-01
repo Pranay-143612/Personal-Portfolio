@@ -1,0 +1,128 @@
+.main-cer {
+    min-height: 100dvh;
+    width: 100%;
+    overflow: hidden;
+    background-image: url(back.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: system-ui;
+
+    >.certifications {
+        height: 100%;
+        width: 100%;
+        padding: 40px 10px;
+
+        >.header {
+            text-align: center;
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            >h1 {
+                font-size: clamp(1.8rem, 5vw, 2.5rem);
+                font-weight: 600;
+            }
+
+            >.underline {
+                height: 4px;
+                width: 60px;
+                margin-top: 10px;
+                background: linear-gradient(to right, blue, rgb(145, 75, 237));
+                border-radius: 25px;
+            }
+        }
+
+        >.banner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+
+            >.card {
+                width: 100%;
+                max-width: 320px;
+                display: flex;
+                flex-direction: column;
+                border-radius: 14px;
+                overflow: hidden;
+                background-color: #fff;
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+                }
+
+                >.certificate {
+                    width: 100%;
+                    aspect-ratio: 4 / 3;
+                    overflow: hidden;
+
+                    >img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        display: block;
+                    }
+                }
+
+                >.info {
+                    padding: 15px 20px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                    >h2 {
+                        font-size: 1.2rem;
+                        background: linear-gradient(to right, blue, rgb(145, 75, 237));
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        font-weight: 600;
+                    }
+
+                    >h4 {
+                        font-size: 0.95rem;
+                        color: #666;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-cer {
+        >.certifications {
+            padding: 30px 15px;
+
+            >.banner {
+                gap: 20px;
+
+                >.card {
+                    max-width: 90%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .main-cer {
+        >.certifications>.header>h1 {
+            font-size: 1.6rem;
+        }
+
+        >.certifications>.banner>.card>.info>h2 {
+            font-size: 1.1rem;
+        }
+
+        >.certifications>.banner>.card>.info>h4 {
+            font-size: 0.9rem;
+        }
+    }
+}

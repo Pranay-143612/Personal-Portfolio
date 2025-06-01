@@ -1,0 +1,178 @@
+/* Global Reset and Smooth Scrolling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar Container */
+.navbar {
+    width: 100%;
+    height: 100%;
+    font-family: system-ui;
+}
+
+/* Navigation Styling */
+.navbar > nav {
+    height: 10vh;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    display: flex;
+    border-radius: 4px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation Links */
+.navbar > nav > ul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Brand Name Header */
+.navbar > nav > ul > .header {
+    font-size: 13px;
+    font-weight: bold;
+    background: linear-gradient(to right, blue, rgb(145, 75, 237));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-left: 10px;
+}
+
+/* Menu Items */
+.navbar > nav > ul > li {
+    padding: 5px;
+}
+
+/* Nav Links */
+.navbar > nav > ul > li > a {
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-weight: 350;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+/* Underline Hover Effect */
+.navbar > nav > ul > li > .line::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, rgb(59, 125, 233), blue, rgb(145, 75, 237));
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar > nav > ul > li > .line:hover::after {
+    width: 100%;
+}
+
+/* Mobile Menu Button */
+.navbar > nav > ul > .menuBtn {
+    display: none;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Push Brand to Left */
+.navbar > nav > ul.original li:first-child {
+    margin-right: auto;
+}
+
+/* Sidebar Menu */
+.navbar nav ul.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 1001;
+    background-color: white;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Sidebar Close Icon */
+.navbar nav ul.sidebar > .cross {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Sidebar Links */
+.navbar nav ul.sidebar > li {
+    width: 100%;
+    padding: 1px;
+}
+
+.navbar nav ul.sidebar > li > a {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+    transition: 0.3s;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar nav ul.sidebar > li > a:hover {
+    color: #fff;
+    background: linear-gradient(to right, blue, rgb(145, 75, 237));
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Sidebar Overlay */
+.navbar nav .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+/* Responsive Styling */
+@media(max-width: 1180px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .navbar > nav > ul > .menuBtn {
+        display: flex;
+    }
+}
+
+@media(max-width: 400px) {
+    .navbar nav ul.sidebar {
+        width: 100%;
+    }
+}

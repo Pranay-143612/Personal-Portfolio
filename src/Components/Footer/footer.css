@@ -1,0 +1,36 @@
+.footer {
+    padding: 30px 10px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui;
+
+    >.content {
+        >h4 {
+            text-align: center;
+        }
+
+        >.socials {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+            >a {
+                font-size: 20px;
+                color: #fff;
+                font-weight: 900;
+                text-decoration: none;
+            }
+        }
+        >.down {
+            width: 100%;
+            padding: 10px;
+            border-top: 1px solid #555;
+        }
+    }
+}
