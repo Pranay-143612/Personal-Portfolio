@@ -40,13 +40,13 @@ html {
 
 /* Brand Name Header */
 .navbar > nav > ul > .header {
-    font-size: 13px;
     font-weight: bold;
     background: linear-gradient(to right, blue, rgb(145, 75, 237));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
     margin-left: 10px;
+    font-size: clamp(7px, 2vw, 13px);
 }
 
 /* Menu Items */
@@ -96,6 +96,10 @@ html {
     margin-right: auto;
 }
 
+.navbar > nav > ul.original li.menuBtn {
+    color: black;
+}
+
 /* Sidebar Menu */
 .navbar nav ul.sidebar {
     position: fixed;
@@ -123,6 +127,7 @@ html {
     padding: 10px;
     font-size: 1.5rem;
     cursor: pointer;
+    color: black;
 }
 
 /* Sidebar Links */
@@ -173,6 +178,6 @@ html {
 
 @media(max-width: 400px) {
     .navbar nav ul.sidebar {
-        width: 100%;
+        width: 80%;
     }
 }

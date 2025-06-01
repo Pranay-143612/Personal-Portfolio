@@ -28,6 +28,8 @@
                 >h1 {
                     font-size: clamp(1.5rem, 5vw, 2.5rem);
                     font-weight: 600;
+                    font-weight: bold;
+                    color: black;
                 }
 
                 >.underline {
@@ -96,6 +98,7 @@
                             -webkit-background-clip: text;
                             -webkit-text-fill-color: transparent;
                             margin: 0;
+                            font-weight: bold;
                         }
 
                         p {

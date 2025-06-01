@@ -25,6 +25,7 @@
             >h1 {
                 font-size: clamp(1.5rem, 5vw, 2.5rem);
                 font-weight: 600;
+                color: black;
             }
 
             >.underline {
